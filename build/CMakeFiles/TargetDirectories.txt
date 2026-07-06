@@ -1,0 +1,6 @@
+/home/frank/MotionPaper/build/CMakeFiles/motionpaper.dir
+/home/frank/MotionPaper/build/CMakeFiles/motionpaper_qmlimportscan.dir
+/home/frank/MotionPaper/build/CMakeFiles/edit_cache.dir
+/home/frank/MotionPaper/build/CMakeFiles/rebuild_cache.dir
+/home/frank/MotionPaper/build/CMakeFiles/motionpaper_autogen_timestamp_deps.dir
+/home/frank/MotionPaper/build/CMakeFiles/motionpaper_autogen.dir
