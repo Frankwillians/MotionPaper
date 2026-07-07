@@ -7,10 +7,9 @@ Rectangle {
     height: 900
     color: "#151515"
 
+    property string selectedTitle: "Select a wallpaper"
     property string selectedCategory: "Video"
     property string selectedThumb: ""
-    property string selectedFilePath: ""
-    property string selectedTitle: "Select a wallpaper"
     property string selectedVideoPath: ""
 
     FileDialog {
@@ -94,7 +93,7 @@ Rectangle {
                             height: 165
                             radius: 16
                             color: "#2B2B2B"
-                            border.color: selectedFilePath === filePath ? "#3B82F6" : "transparent"
+                            border.color: selectedVideoPath === filePath ? "#3B82F6" : "transparent"
                             border.width: 2
 
                             MouseArea {
@@ -103,9 +102,8 @@ Rectangle {
                                     selectedTitle = title
                                     selectedCategory = "Video"
                                     selectedThumb = thumbPath
-                                    selectedFilePath = filePath
                                     selectedVideoPath = filePath
-
+                                    previewPlayer.play()
                                 }
                             }
 
@@ -187,36 +185,28 @@ Rectangle {
                                 clip: true
 
                                 MediaPlayer {
-    id: previewPlayer
-    source: selectedFilePath !== "" ? "file://" + selectedFilePath : ""
-    videoOutput: previewOutput
-    audioOutput: AudioOutput {
-        muted: true
-    }
-    loops: MediaPlayer.Infinite
-}
+                                    id: previewPlayer
+                                    source: selectedVideoPath !== "" ? "file://" + selectedVideoPath : ""
+                                    videoOutput: previewOutput
+                                    audioOutput: AudioOutput {
+                                        muted: true
+                                    }
+                                    loops: MediaPlayer.Infinite
+                                }
 
-VideoOutput {
-    id: previewOutput
-    anchors.fill: parent
-    fillMode: VideoOutput.PreserveAspectCrop
-    visible: selectedFilePath !== ""
-}
-
-Text {
-    anchors.centerIn: parent
-    text: selectedTitle
-    color: "#666666"
-    font.pixelSize: 24
-    visible: selectedFilePath === ""
-}
+                                VideoOutput {
+                                    id: previewOutput
+                                    anchors.fill: parent
+                                    fillMode: VideoOutput.PreserveAspectCrop
+                                    visible: selectedVideoPath !== ""
+                                }
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: selectedTitle
                                     color: "#666666"
                                     font.pixelSize: 24
-                                    visible: selectedThumb === ""
+                                    visible: selectedVideoPath === ""
                                 }
                             }
 
@@ -246,6 +236,30 @@ Text {
 
                                     Text {
                                         anchors.centerIn: parent
+                                        text: "Apply"
+                                        color: "white"
+                                        font.bold: true
+                                    }
+
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: {
+                                            if (selectedVideoPath === "")
+                                                return
+
+                                            BackendManager.applyWallpaper(selectedVideoPath)
+                                        }
+                                    }
+                                }
+
+                                Rectangle {
+                                    width: 120
+                                    height: 44
+                                    radius: 10
+                                    color: "#2563EB"
+
+                                    Text {
+                                        anchors.centerIn: parent
                                         text: previewPlayer.playbackState === MediaPlayer.PlayingState ? "Pause" : "Play"
                                         color: "white"
                                         font.bold: true
@@ -254,12 +268,15 @@ Text {
                                     MouseArea {
                                         anchors.fill: parent
                                         onClicked: {
-    if (previewPlayer.playbackState === MediaPlayer.PlayingState) {
-        previewPlayer.pause()
-    } else {
-        previewPlayer.play()
-    }
-}
+                                            if (selectedVideoPath === "")
+                                                return
+
+                                            if (previewPlayer.playbackState === MediaPlayer.PlayingState) {
+                                                previewPlayer.pause()
+                                            } else {
+                                                previewPlayer.play()
+                                            }
+                                        }
                                     }
                                 }
 
@@ -283,23 +300,23 @@ Text {
                                 }
 
                                 Rectangle {
-    width: 120
-    height: 44
-    radius: 10
-    color: "#2B2B2B"
+                                    width: 120
+                                    height: 44
+                                    radius: 10
+                                    color: "#2B2B2B"
 
-    Text {
-        anchors.centerIn: parent
-        text: "Stop"
-        color: "white"
-        font.bold: true
-    }
+                                    Text {
+                                        anchors.centerIn: parent
+                                        text: "Stop"
+                                        color: "white"
+                                        font.bold: true
+                                    }
 
-    MouseArea {
-        anchors.fill: parent
-        onClicked: previewPlayer.stop()
-    }
-}
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: previewPlayer.stop()
+                                    }
+                                }
 
                                 Rectangle {
                                     width: 120
@@ -314,22 +331,21 @@ Text {
                                         font.bold: true
                                     }
 
-                                   MouseArea {
-    anchors.fill: parent
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: {
+                                            if (selectedVideoPath === "")
+                                                return
 
-    onClicked: {
+                                            previewPlayer.stop()
+                                            LibraryManager.deleteWallpaper(selectedVideoPath)
 
-        if (selectedVideoPath === "")
-            return
-
-        LibraryManager.deleteWallpaper(selectedVideoPath)
-
-        selectedTitle = "Select a wallpaper"
-        selectedCategory = "Video"
-        selectedThumb = ""
-        selectedVideoPath = ""
-    }
-}
+                                            selectedTitle = "Select a wallpaper"
+                                            selectedCategory = "Video"
+                                            selectedThumb = ""
+                                            selectedVideoPath = ""
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -344,7 +360,7 @@ Text {
 
                     Text {
                         anchors.centerIn: parent
-                        text: "CPU 1%    GPU 3%    FPS 60    Backend: Not selected"
+                        text: "CPU 1%    GPU 3%    FPS 60    Backend: " + BackendManager.currentBackend
                         color: "#AAAAAA"
                         font.pixelSize: 16
                     }

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "motionpaper_autogen"
   "CMakeFiles/motionpaper.dir/app/main.cpp.o"
   "CMakeFiles/motionpaper.dir/app/main.cpp.o.d"
+  "CMakeFiles/motionpaper.dir/core/backend/BackendManager.cpp.o"
+  "CMakeFiles/motionpaper.dir/core/backend/BackendManager.cpp.o.d"
   "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o"
   "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o.d"
   "CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o"

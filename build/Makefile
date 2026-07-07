@@ -192,6 +192,30 @@ app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
 
+core/backend/BackendManager.o: core/backend/BackendManager.cpp.o
+.PHONY : core/backend/BackendManager.o
+
+# target to build an object file
+core/backend/BackendManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/backend/BackendManager.cpp.o
+.PHONY : core/backend/BackendManager.cpp.o
+
+core/backend/BackendManager.i: core/backend/BackendManager.cpp.i
+.PHONY : core/backend/BackendManager.i
+
+# target to preprocess a source file
+core/backend/BackendManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/backend/BackendManager.cpp.i
+.PHONY : core/backend/BackendManager.cpp.i
+
+core/backend/BackendManager.s: core/backend/BackendManager.cpp.s
+.PHONY : core/backend/BackendManager.s
+
+# target to generate assembly for a file
+core/backend/BackendManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/backend/BackendManager.cpp.s
+.PHONY : core/backend/BackendManager.cpp.s
+
 core/library/LibraryManager.o: core/library/LibraryManager.cpp.o
 .PHONY : core/library/LibraryManager.o
 
@@ -279,6 +303,9 @@ help:
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
+	@echo "... core/backend/BackendManager.o"
+	@echo "... core/backend/BackendManager.i"
+	@echo "... core/backend/BackendManager.s"
 	@echo "... core/library/LibraryManager.o"
 	@echo "... core/library/LibraryManager.i"
 	@echo "... core/library/LibraryManager.s"

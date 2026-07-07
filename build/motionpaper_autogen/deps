@@ -4,6 +4,8 @@ motionpaper_autogen/timestamp: \
 	/home/frank/MotionPaper/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/frank/MotionPaper/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/frank/MotionPaper/build/motionpaper_autogen/moc_predefs.h \
+	/home/frank/MotionPaper/core/backend/BackendManager.cpp \
+	/home/frank/MotionPaper/core/backend/BackendManager.h \
 	/home/frank/MotionPaper/core/library/LibraryManager.cpp \
 	/home/frank/MotionPaper/core/library/LibraryManager.h \
 	/home/frank/MotionPaper/core/library/WallpaperModel.cpp \

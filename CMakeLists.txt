@@ -22,6 +22,9 @@ qt_add_executable(motionpaper
 
     core/library/WallpaperModel.h
     core/library/WallpaperModel.cpp
+
+    core/backend/BackendManager.h
+    core/backend/BackendManager.cpp
 )
 
 find_package(Qt6 REQUIRED COMPONENTS

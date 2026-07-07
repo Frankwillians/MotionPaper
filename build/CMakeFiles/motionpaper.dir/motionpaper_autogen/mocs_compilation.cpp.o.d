@@ -1,7 +1,7 @@
 CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o: \
  /home/frank/MotionPaper/build/motionpaper_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_LibraryManager.cpp \
+ /home/frank/MotionPaper/build/motionpaper_autogen/OXRLLLIEAH/moc_BackendManager.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -196,7 +196,7 @@ CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/../../../core/library/LibraryManager.h \
+ /home/frank/MotionPaper/build/motionpaper_autogen/OXRLLLIEAH/../../../core/backend/BackendManager.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
@@ -336,6 +336,8 @@ CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/charconv /usr/include/c++/13/span \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_LibraryManager.cpp \
+ /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/../../../core/library/LibraryManager.h \
  /home/frank/MotionPaper/core/library/WallpaperModel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QAbstractListModel \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
