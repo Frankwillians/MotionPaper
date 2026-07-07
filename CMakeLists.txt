@@ -24,6 +24,14 @@ qt_add_executable(motionpaper
     core/library/WallpaperModel.cpp
 )
 
+find_package(Qt6 REQUIRED COMPONENTS
+    Core
+    Gui
+    Quick
+    Qml
+    Multimedia
+)
+
 target_include_directories(motionpaper
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
@@ -35,4 +43,6 @@ target_link_libraries(motionpaper
         Qt6::Gui
         Qt6::Quick
         Qt6::Qml
+        Qt6::Qml
+        Qt6::Multimedia
 )

@@ -152,3 +152,25 @@ bool LibraryManager::generateThumbnail(const QString &videoPath, const QString &
 
     return ok;
 }
+
+bool LibraryManager::deleteWallpaper(const QString &videoPath)
+{
+    if (videoPath.isEmpty())
+        return false;
+
+    QFileInfo info(videoPath);
+
+    if (!info.exists())
+        return false;
+
+    const QString thumb = m_thumbsPath + "/" + info.completeBaseName() + ".jpg";
+
+    QFile::remove(videoPath);
+
+    if (QFile::exists(thumb))
+        QFile::remove(thumb);
+
+    reload();
+
+    return true;
+}

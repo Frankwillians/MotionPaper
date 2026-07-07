@@ -141,14 +141,15 @@ motionpaper: CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o
 motionpaper: CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o
 motionpaper: CMakeFiles/motionpaper.dir/build.make
 motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
+motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Multimedia.so.6.4.2
 motionpaper: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.4.2
 motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.4.2
-motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
 motionpaper: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
 motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
-motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 motionpaper: /usr/lib/x86_64-linux-gnu/libGLX.so
 motionpaper: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
+motionpaper: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 motionpaper: CMakeFiles/motionpaper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable motionpaper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motionpaper.dir/link.txt --verbose=$(VERBOSE)

@@ -16,6 +16,7 @@ public:
 
     Q_INVOKABLE bool importVideo(const QString &fileUrl);
     Q_INVOKABLE bool deleteVideo(const QString &filePath);
+    Q_INVOKABLE bool deleteWallpaper(const QString &videoPath);
     Q_INVOKABLE bool openVideo(const QString &filePath);
     Q_INVOKABLE void reload();
 

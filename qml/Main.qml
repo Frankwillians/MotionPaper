@@ -1,14 +1,17 @@
 import QtQuick
 import QtQuick.Dialogs
+import QtMultimedia
 
 Rectangle {
     width: 1400
     height: 900
     color: "#151515"
 
-    property string selectedTitle: "Select a wallpaper"
     property string selectedCategory: "Video"
     property string selectedThumb: ""
+    property string selectedFilePath: ""
+    property string selectedTitle: "Select a wallpaper"
+    property string selectedVideoPath: ""
 
     FileDialog {
         id: fileDialog
@@ -91,17 +94,18 @@ Rectangle {
                             height: 165
                             radius: 16
                             color: "#2B2B2B"
-                            border.color: selectedTitle === title ? "#3B82F6" : "transparent"
+                            border.color: selectedFilePath === filePath ? "#3B82F6" : "transparent"
                             border.width: 2
 
                             MouseArea {
                                 anchors.fill: parent
-                                hoverEnabled: true
-
                                 onClicked: {
                                     selectedTitle = title
                                     selectedCategory = "Video"
                                     selectedThumb = thumbPath
+                                    selectedFilePath = filePath
+                                    selectedVideoPath = filePath
+
                                 }
                             }
 
@@ -182,12 +186,30 @@ Rectangle {
                                 color: "black"
                                 clip: true
 
-                                Image {
-                                    anchors.fill: parent
-                                    source: selectedThumb
-                                    fillMode: Image.PreserveAspectCrop
-                                    visible: selectedThumb !== ""
-                                }
+                                MediaPlayer {
+    id: previewPlayer
+    source: selectedFilePath !== "" ? "file://" + selectedFilePath : ""
+    videoOutput: previewOutput
+    audioOutput: AudioOutput {
+        muted: true
+    }
+    loops: MediaPlayer.Infinite
+}
+
+VideoOutput {
+    id: previewOutput
+    anchors.fill: parent
+    fillMode: VideoOutput.PreserveAspectCrop
+    visible: selectedFilePath !== ""
+}
+
+Text {
+    anchors.centerIn: parent
+    text: selectedTitle
+    color: "#666666"
+    font.pixelSize: 24
+    visible: selectedFilePath === ""
+}
 
                                 Text {
                                     anchors.centerIn: parent
@@ -217,21 +239,32 @@ Rectangle {
                                 spacing: 12
 
                                 Rectangle {
-                                    width: 130
+                                    width: 120
                                     height: 44
                                     radius: 10
                                     color: "#3B82F6"
 
                                     Text {
                                         anchors.centerIn: parent
-                                        text: "Apply"
+                                        text: previewPlayer.playbackState === MediaPlayer.PlayingState ? "Pause" : "Play"
                                         color: "white"
                                         font.bold: true
+                                    }
+
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: {
+    if (previewPlayer.playbackState === MediaPlayer.PlayingState) {
+        previewPlayer.pause()
+    } else {
+        previewPlayer.play()
+    }
+}
                                     }
                                 }
 
                                 Rectangle {
-                                    width: 130
+                                    width: 120
                                     height: 44
                                     radius: 10
                                     color: "#2B2B2B"
@@ -247,6 +280,56 @@ Rectangle {
                                         anchors.fill: parent
                                         onClicked: fileDialog.open()
                                     }
+                                }
+
+                                Rectangle {
+    width: 120
+    height: 44
+    radius: 10
+    color: "#2B2B2B"
+
+    Text {
+        anchors.centerIn: parent
+        text: "Stop"
+        color: "white"
+        font.bold: true
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: previewPlayer.stop()
+    }
+}
+
+                                Rectangle {
+                                    width: 120
+                                    height: 44
+                                    radius: 10
+                                    color: "#7F1D1D"
+
+                                    Text {
+                                        anchors.centerIn: parent
+                                        text: "Delete"
+                                        color: "white"
+                                        font.bold: true
+                                    }
+
+                                   MouseArea {
+    anchors.fill: parent
+
+    onClicked: {
+
+        if (selectedVideoPath === "")
+            return
+
+        LibraryManager.deleteWallpaper(selectedVideoPath)
+
+        selectedTitle = "Select a wallpaper"
+        selectedCategory = "Video"
+        selectedThumb = ""
+        selectedVideoPath = ""
+    }
+}
                                 }
                             }
                         }

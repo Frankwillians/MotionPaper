@@ -26,14 +26,19 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_LibraryManager_t {
-    uint offsetsAndSizes[14];
+    uint offsetsAndSizes[24];
     char stringdata0[15];
     char stringdata1[12];
     char stringdata2[1];
     char stringdata3[8];
-    char stringdata4[7];
-    char stringdata5[6];
+    char stringdata4[12];
+    char stringdata5[9];
     char stringdata6[16];
+    char stringdata7[10];
+    char stringdata8[10];
+    char stringdata9[7];
+    char stringdata10[6];
+    char stringdata11[16];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_LibraryManager_t::offsetsAndSizes) + ofs), len 
@@ -43,14 +48,24 @@ Q_CONSTINIT static const qt_meta_stringdata_LibraryManager_t qt_meta_stringdata_
         QT_MOC_LITERAL(15, 11),  // "importVideo"
         QT_MOC_LITERAL(27, 0),  // ""
         QT_MOC_LITERAL(28, 7),  // "fileUrl"
-        QT_MOC_LITERAL(36, 6),  // "reload"
-        QT_MOC_LITERAL(43, 5),  // "model"
-        QT_MOC_LITERAL(49, 15)   // "WallpaperModel*"
+        QT_MOC_LITERAL(36, 11),  // "deleteVideo"
+        QT_MOC_LITERAL(48, 8),  // "filePath"
+        QT_MOC_LITERAL(57, 15),  // "deleteWallpaper"
+        QT_MOC_LITERAL(73, 9),  // "videoPath"
+        QT_MOC_LITERAL(83, 9),  // "openVideo"
+        QT_MOC_LITERAL(93, 6),  // "reload"
+        QT_MOC_LITERAL(100, 5),  // "model"
+        QT_MOC_LITERAL(106, 15)   // "WallpaperModel*"
     },
     "LibraryManager",
     "importVideo",
     "",
     "fileUrl",
+    "deleteVideo",
+    "filePath",
+    "deleteWallpaper",
+    "videoPath",
+    "openVideo",
     "reload",
     "model",
     "WallpaperModel*"
@@ -64,23 +79,29 @@ Q_CONSTINIT static const uint qt_meta_data_LibraryManager[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
-       1,   30, // properties
+       5,   14, // methods
+       1,   57, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   26,    2, 0x02,    2 /* Public */,
-       4,    0,   29,    2, 0x02,    4 /* Public */,
+       1,    1,   44,    2, 0x02,    2 /* Public */,
+       4,    1,   47,    2, 0x02,    4 /* Public */,
+       6,    1,   50,    2, 0x02,    6 /* Public */,
+       8,    1,   53,    2, 0x02,    8 /* Public */,
+       9,    0,   56,    2, 0x02,   10 /* Public */,
 
  // methods: parameters
     QMetaType::Bool, QMetaType::QString,    3,
+    QMetaType::Bool, QMetaType::QString,    5,
+    QMetaType::Bool, QMetaType::QString,    7,
+    QMetaType::Bool, QMetaType::QString,    5,
     QMetaType::Void,
 
  // properties: name, type, flags
-       5, 0x80000000 | 6, 0x00015409, uint(-1), 0,
+      10, 0x80000000 | 11, 0x00015409, uint(-1), 0,
 
        0        // eod
 };
@@ -99,6 +120,15 @@ Q_CONSTINIT const QMetaObject LibraryManager::staticMetaObject = { {
         // method 'importVideo'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'deleteVideo'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'deleteWallpaper'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'openVideo'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'reload'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -113,7 +143,13 @@ void LibraryManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: { bool _r = _t->importVideo((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 1: _t->reload(); break;
+        case 1: { bool _r = _t->deleteVideo((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 2: { bool _r = _t->deleteWallpaper((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 3: { bool _r = _t->openVideo((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 4: _t->reload(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterPropertyMetaType) {
@@ -156,13 +192,13 @@ int LibraryManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 5;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
