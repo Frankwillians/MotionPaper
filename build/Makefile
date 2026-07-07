@@ -264,6 +264,30 @@ core/library/WallpaperModel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.s
 .PHONY : core/library/WallpaperModel.cpp.s
 
+core/settings/SettingsManager.o: core/settings/SettingsManager.cpp.o
+.PHONY : core/settings/SettingsManager.o
+
+# target to build an object file
+core/settings/SettingsManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/settings/SettingsManager.cpp.o
+.PHONY : core/settings/SettingsManager.cpp.o
+
+core/settings/SettingsManager.i: core/settings/SettingsManager.cpp.i
+.PHONY : core/settings/SettingsManager.i
+
+# target to preprocess a source file
+core/settings/SettingsManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/settings/SettingsManager.cpp.i
+.PHONY : core/settings/SettingsManager.cpp.i
+
+core/settings/SettingsManager.s: core/settings/SettingsManager.cpp.s
+.PHONY : core/settings/SettingsManager.s
+
+# target to generate assembly for a file
+core/settings/SettingsManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/settings/SettingsManager.cpp.s
+.PHONY : core/settings/SettingsManager.cpp.s
+
 motionpaper_autogen/mocs_compilation.o: motionpaper_autogen/mocs_compilation.cpp.o
 .PHONY : motionpaper_autogen/mocs_compilation.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... core/library/WallpaperModel.o"
 	@echo "... core/library/WallpaperModel.i"
 	@echo "... core/library/WallpaperModel.s"
+	@echo "... core/settings/SettingsManager.o"
+	@echo "... core/settings/SettingsManager.i"
+	@echo "... core/settings/SettingsManager.s"
 	@echo "... motionpaper_autogen/mocs_compilation.o"
 	@echo "... motionpaper_autogen/mocs_compilation.i"
 	@echo "... motionpaper_autogen/mocs_compilation.s"

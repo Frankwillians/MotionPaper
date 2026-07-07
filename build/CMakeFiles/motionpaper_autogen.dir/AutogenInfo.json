@@ -387,6 +387,12 @@
 			"Mu",
 			"4AVNQH6F5F/moc_WallpaperModel.cpp",
 			null
+		],
+		[
+			"/home/frank/MotionPaper/core/settings/SettingsManager.h",
+			"Mu",
+			"6XUUAVOR6N/moc_SettingsManager.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -469,7 +475,12 @@
 		[ "/home/frank/MotionPaper/app/main.cpp", "Mu", null ],
 		[ "/home/frank/MotionPaper/core/backend/BackendManager.cpp", "Mu", null ],
 		[ "/home/frank/MotionPaper/core/library/LibraryManager.cpp", "Mu", null ],
-		[ "/home/frank/MotionPaper/core/library/WallpaperModel.cpp", "Mu", null ]
+		[ "/home/frank/MotionPaper/core/library/WallpaperModel.cpp", "Mu", null ],
+		[
+			"/home/frank/MotionPaper/core/settings/SettingsManager.cpp",
+			"Mu",
+			null
+		]
 	],
 	"VERBOSITY" : 0
 }

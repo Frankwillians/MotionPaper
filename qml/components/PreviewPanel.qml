@@ -20,7 +20,9 @@ Rectangle {
         id: previewPlayer
         source: root.selectedVideoPath !== "" ? "file://" + root.selectedVideoPath : ""
         videoOutput: previewOutput
-        audioOutput: AudioOutput { muted: true }
+        audioOutput: AudioOutput {
+            muted: SettingsManager.mutePreview
+        }
         loops: MediaPlayer.Infinite
     }
 
@@ -85,7 +87,7 @@ Rectangle {
     }
 
     onSelectedVideoPathChanged: {
-        if (selectedVideoPath !== "")
+        if (selectedVideoPath !== "" && SettingsManager.autoPlay)
             previewPlayer.play()
     }
 }

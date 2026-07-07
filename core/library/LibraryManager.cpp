@@ -29,6 +29,22 @@ WallpaperModel* LibraryManager::model()
     return &m_model;
 }
 
+QString LibraryManager::searchQuery() const
+{
+    return m_searchQuery;
+}
+
+void LibraryManager::setSearchQuery(const QString &query)
+{
+    if (m_searchQuery == query)
+        return;
+
+    m_searchQuery = query;
+    emit searchQueryChanged();
+
+    applyFilter();
+}
+
 void LibraryManager::reload()
 {
     QDir dir(m_wallpapersPath);
@@ -38,7 +54,8 @@ void LibraryManager::reload()
     };
 
     const QStringList files = dir.entryList(filters, QDir::Files, QDir::Name);
-    QList<WallpaperItem> items;
+
+    m_allItems.clear();
 
     for (const QString &file : files) {
         QFileInfo info(m_wallpapersPath + "/" + file);
@@ -51,21 +68,39 @@ void LibraryManager::reload()
             generateThumbnail(videoPath, thumbPath);
         }
 
-        items.append({
+        m_allItems.append({
             title,
             videoPath,
             QFile::exists(thumbPath) ? "file://" + thumbPath : ""
         });
     }
 
-    m_model.setItems(items);
+    applyFilter();
+
     qDebug() << "Wallpapers carregados:" << files;
+}
+
+void LibraryManager::applyFilter()
+{
+    if (m_searchQuery.trimmed().isEmpty()) {
+        m_model.setItems(m_allItems);
+        return;
+    }
+
+    QList<WallpaperItem> filtered;
+    const QString query = m_searchQuery.trimmed().toLower();
+
+    for (const WallpaperItem &item : m_allItems) {
+        if (item.title.toLower().contains(query)) {
+            filtered.append(item);
+        }
+    }
+
+    m_model.setItems(filtered);
 }
 
 bool LibraryManager::importVideo(const QString &fileUrl)
 {
-    qDebug() << "Import recebido:" << fileUrl;
-
     QUrl url(fileUrl);
     QString sourcePath = url.isLocalFile() ? url.toLocalFile() : fileUrl;
 
@@ -83,8 +118,6 @@ bool LibraryManager::importVideo(const QString &fileUrl)
 
     const bool ok = QFile::copy(sourcePath, destinationPath);
 
-    qDebug() << "Copy OK:" << ok;
-
     if (ok)
         reload();
 
@@ -93,64 +126,7 @@ bool LibraryManager::importVideo(const QString &fileUrl)
 
 bool LibraryManager::deleteVideo(const QString &filePath)
 {
-    if (filePath.isEmpty())
-        return false;
-
-    QFileInfo info(filePath);
-
-    if (!info.exists()) {
-        qDebug() << "Delete: arquivo não existe:" << filePath;
-        return false;
-    }
-
-    const QString title = info.completeBaseName();
-    const QString thumbPath = m_thumbsPath + "/" + title + ".jpg";
-
-    bool videoDeleted = QFile::remove(filePath);
-
-    if (QFile::exists(thumbPath))
-        QFile::remove(thumbPath);
-
-    qDebug() << "Delete video:" << filePath << videoDeleted;
-
-    reload();
-    return videoDeleted;
-}
-
-bool LibraryManager::openVideo(const QString &filePath)
-{
-    if (filePath.isEmpty())
-        return false;
-
-    QFileInfo info(filePath);
-
-    if (!info.exists()) {
-        qDebug() << "Open: arquivo não existe:" << filePath;
-        return false;
-    }
-
-    return QDesktopServices::openUrl(QUrl::fromLocalFile(filePath));
-}
-
-bool LibraryManager::generateThumbnail(const QString &videoPath, const QString &thumbPath)
-{
-    QStringList args;
-    args << "-y";
-    args << "-ss" << "00:00:02";
-    args << "-i" << videoPath;
-    args << "-frames:v" << "1";
-    args << "-q:v" << "2";
-    args << thumbPath;
-
-    QProcess ffmpeg;
-    ffmpeg.start("ffmpeg", args);
-    ffmpeg.waitForFinished(10000);
-
-    const bool ok = QFile::exists(thumbPath);
-
-    qDebug() << "Thumbnail:" << thumbPath << "OK:" << ok;
-
-    return ok;
+    return deleteWallpaper(filePath);
 }
 
 bool LibraryManager::deleteWallpaper(const QString &videoPath)
@@ -173,4 +149,34 @@ bool LibraryManager::deleteWallpaper(const QString &videoPath)
     reload();
 
     return true;
+}
+
+bool LibraryManager::openVideo(const QString &filePath)
+{
+    if (filePath.isEmpty())
+        return false;
+
+    QFileInfo info(filePath);
+
+    if (!info.exists())
+        return false;
+
+    return QDesktopServices::openUrl(QUrl::fromLocalFile(filePath));
+}
+
+bool LibraryManager::generateThumbnail(const QString &videoPath, const QString &thumbPath)
+{
+    QStringList args;
+    args << "-y";
+    args << "-ss" << "00:00:02";
+    args << "-i" << videoPath;
+    args << "-frames:v" << "1";
+    args << "-q:v" << "2";
+    args << thumbPath;
+
+    QProcess ffmpeg;
+    ffmpeg.start("ffmpeg", args);
+    ffmpeg.waitForFinished(10000);
+
+    return QFile::exists(thumbPath);
 }

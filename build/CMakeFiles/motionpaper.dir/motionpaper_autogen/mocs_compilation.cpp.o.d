@@ -357,4 +357,8 @@ CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
- /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_WallpaperModel.cpp
+ /home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_WallpaperModel.cpp \
+ /home/frank/MotionPaper/build/motionpaper_autogen/6XUUAVOR6N/moc_SettingsManager.cpp \
+ /home/frank/MotionPaper/build/motionpaper_autogen/6XUUAVOR6N/../../../core/settings/SettingsManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h

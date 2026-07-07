@@ -2,3 +2,4 @@
 #include "OXRLLLIEAH/moc_BackendManager.cpp"
 #include "4AVNQH6F5F/moc_LibraryManager.cpp"
 #include "4AVNQH6F5F/moc_WallpaperModel.cpp"
+#include "6XUUAVOR6N/moc_SettingsManager.cpp"

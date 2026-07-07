@@ -1,6 +1,5 @@
 import QtQuick
 import QtQuick.Dialogs
-import QtMultimedia
 import "components"
 
 Rectangle {
@@ -9,6 +8,8 @@ Rectangle {
     width: 1400
     height: 900
     color: "#151515"
+
+    property string currentPage: "library"
 
     property string selectedTitle: "Select a wallpaper"
     property string selectedCategory: "Video"
@@ -19,10 +20,7 @@ Rectangle {
         id: fileDialog
         title: "Import video"
         nameFilters: ["Video files (*.mp4 *.webm *.mkv *.mov *.avi)"]
-
-        onAccepted: {
-            LibraryManager.importVideo(String(selectedFile))
-        }
+        onAccepted: LibraryManager.importVideo(String(selectedFile))
     }
 
     Row {
@@ -30,6 +28,8 @@ Rectangle {
 
         Sidebar {
             height: parent.height
+            activePage: root.currentPage
+            onPageSelected: root.currentPage = page
         }
 
         Rectangle {
@@ -43,13 +43,19 @@ Rectangle {
                 spacing: 24
 
                 SearchBar {
-                    width: parent.width
-                }
+    width: parent.width
+    visible: root.currentPage === "library"
+
+    onSearchChanged: function(text) {
+        LibraryManager.searchQuery = text
+    }
+}
 
                 Row {
                     width: parent.width
                     height: 560
                     spacing: 24
+                    visible: root.currentPage === "library"
 
                     WallpaperGrid {
                         width: parent.width * 0.58
@@ -73,15 +79,11 @@ Rectangle {
                         selectedVideoPath: root.selectedVideoPath
 
                         onApply: {
-                            if (root.selectedVideoPath === "")
-                                return
-
-                            BackendManager.applyWallpaper(root.selectedVideoPath)
+                            if (root.selectedVideoPath !== "")
+                                BackendManager.applyWallpaper(root.selectedVideoPath)
                         }
 
-                        onImportClicked: {
-                            fileDialog.open()
-                        }
+                        onImportClicked: fileDialog.open()
 
                         onDeleteWallpaper: {
                             if (root.selectedVideoPath === "")
@@ -94,6 +96,40 @@ Rectangle {
                             root.selectedThumb = ""
                             root.selectedVideoPath = ""
                         }
+                    }
+                }
+
+                SettingsPage {
+                    width: parent.width
+                    height: 560
+                    visible: root.currentPage === "settings"
+                }
+
+                Rectangle {
+                    width: parent.width
+                    height: 560
+                    color: "transparent"
+                    visible: root.currentPage === "favorites"
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: "Favorites coming soon"
+                        color: "#AAAAAA"
+                        font.pixelSize: 28
+                    }
+                }
+
+                Rectangle {
+                    width: parent.width
+                    height: 560
+                    color: "transparent"
+                    visible: root.currentPage === "workshop"
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: "Workshop coming soon"
+                        color: "#AAAAAA"
+                        font.pixelSize: 28
                     }
                 }
 

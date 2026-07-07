@@ -25,6 +25,12 @@ qt_add_executable(motionpaper
 
     core/backend/BackendManager.h
     core/backend/BackendManager.cpp
+
+    core/settings/SettingsManager.h
+    core/settings/SettingsManager.cpp
+
+    core/settings/SettingsManager.h
+    core/settings/SettingsManager.cpp
 )
 
 find_package(Qt6 REQUIRED COMPONENTS
