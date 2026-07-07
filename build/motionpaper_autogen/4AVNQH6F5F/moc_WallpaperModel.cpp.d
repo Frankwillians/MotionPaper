@@ -1,6 +1,5 @@
-/home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_LibraryManager.cpp: /home/frank/MotionPaper/core/library/LibraryManager.h \
+/home/frank/MotionPaper/build/motionpaper_autogen/4AVNQH6F5F/moc_WallpaperModel.cpp: /home/frank/MotionPaper/core/library/WallpaperModel.h \
   /home/frank/MotionPaper/build/motionpaper_autogen/moc_predefs.h \
-  /home/frank/MotionPaper/core/library/WallpaperModel.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -285,8 +284,6 @@
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QAbstractListModel \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \

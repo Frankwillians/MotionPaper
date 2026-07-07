@@ -1,23 +1,23 @@
-
-import QtQuick.Dialogs
 import QtQuick
+import QtQuick.Dialogs
 
 Rectangle {
     width: 1400
     height: 900
     color: "#151515"
 
-    property string selectedTitle: "Cyberpunk City"
-    property string selectedCategory: "Video Wallpaper"
+    property string selectedTitle: "Select a wallpaper"
+    property string selectedCategory: "Video"
+    property string selectedThumb: ""
 
-    ListModel {
-        id: wallpapers
-        ListElement { title: "Cyberpunk City"; category: "Video" }
-        ListElement { title: "Forest Rain"; category: "Nature" }
-        ListElement { title: "Space Nebula"; category: "Space" }
-        ListElement { title: "Anime Room"; category: "Anime" }
-        ListElement { title: "Neon Street"; category: "Cyberpunk" }
-        ListElement { title: "Ocean Waves"; category: "Nature" }
+    FileDialog {
+        id: fileDialog
+        title: "Import video"
+        nameFilters: ["Video files (*.mp4 *.webm *.mkv *.mov *.avi)"]
+
+        onAccepted: {
+            LibraryManager.importVideo(String(selectedFile))
+        }
     }
 
     Row {
@@ -34,7 +34,7 @@ Rectangle {
                 spacing: 22
 
                 Text {
-                    text: "MotionPaper"
+                    text: "LivePaper"
                     color: "white"
                     font.pixelSize: 28
                     font.bold: true
@@ -51,14 +51,6 @@ Rectangle {
             width: parent.width - 240
             height: parent.height
             color: "#181818"
-            FileDialog {
-    id: fileDialog
-    title: "Import video"
-    nameFilters: ["Video files (*.mp4 *.webm *.mkv *.mov *.avi)"]
-    onAccepted: {
-        LibraryManager.importVideo(String(selectedFile))
-    }
-}
 
             Column {
                 anchors.fill: parent
@@ -89,21 +81,27 @@ Rectangle {
                     GridView {
                         width: parent.width * 0.58
                         height: parent.height
-                        cellWidth: 220
-                        cellHeight: 180
-                        model: LibraryManager.wallpapers
+                        cellWidth: 240
+                        cellHeight: 190
+                        model: LibraryManager.model
+                        clip: true
 
                         delegate: Rectangle {
-                            width: 200
-                            height: 155
+                            width: 220
+                            height: 165
                             radius: 16
                             color: "#2B2B2B"
+                            border.color: selectedTitle === title ? "#3B82F6" : "transparent"
+                            border.width: 2
 
                             MouseArea {
                                 anchors.fill: parent
+                                hoverEnabled: true
+
                                 onClicked: {
                                     selectedTitle = title
                                     selectedCategory = "Video"
+                                    selectedThumb = thumbPath
                                 }
                             }
 
@@ -111,27 +109,39 @@ Rectangle {
                                 anchors.top: parent.top
                                 anchors.left: parent.left
                                 anchors.right: parent.right
-                                height: 100
+                                height: 110
                                 radius: 16
                                 color: "#333333"
+                                clip: true
+
+                                Image {
+                                    anchors.fill: parent
+                                    source: thumbPath
+                                    fillMode: Image.PreserveAspectCrop
+                                    visible: thumbPath !== ""
+                                }
 
                                 Text {
                                     anchors.centerIn: parent
-                                    text: "Preview"
+                                    text: "No Preview"
                                     color: "#888888"
-                                    font.pixelSize: 18
+                                    font.pixelSize: 16
+                                    visible: thumbPath === ""
                                 }
                             }
 
                             Text {
                                 anchors.left: parent.left
                                 anchors.leftMargin: 12
+                                anchors.right: parent.right
+                                anchors.rightMargin: 12
                                 anchors.bottom: parent.bottom
-                                anchors.bottomMargin: 28
-                                text: modelData
+                                anchors.bottomMargin: 30
+                                text: title
                                 color: "white"
-                                font.pixelSize: 16
+                                font.pixelSize: 15
                                 font.bold: true
+                                elide: Text.ElideRight
                             }
 
                             Text {
@@ -170,12 +180,21 @@ Rectangle {
                                 height: 320
                                 radius: 16
                                 color: "black"
+                                clip: true
+
+                                Image {
+                                    anchors.fill: parent
+                                    source: selectedThumb
+                                    fillMode: Image.PreserveAspectCrop
+                                    visible: selectedThumb !== ""
+                                }
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: selectedTitle
                                     color: "#666666"
                                     font.pixelSize: 24
+                                    visible: selectedThumb === ""
                                 }
                             }
 
@@ -184,6 +203,8 @@ Rectangle {
                                 color: "white"
                                 font.pixelSize: 24
                                 font.bold: true
+                                elide: Text.ElideRight
+                                width: parent.width
                             }
 
                             Text {
@@ -210,23 +231,22 @@ Rectangle {
                                 }
 
                                 Rectangle {
-    width: 130
-    height: 44
-    radius: 10
-    color: "#2B2B2B"
+                                    width: 130
+                                    height: 44
+                                    radius: 10
+                                    color: "#2B2B2B"
 
-    Text {
-        anchors.centerIn: parent
-        text: "Import"
-        color: "white"
-        font.bold: true
-    }
+                                    Text {
+                                        anchors.centerIn: parent
+                                        text: "Import"
+                                        color: "white"
+                                        font.bold: true
+                                    }
 
-    MouseArea {
-        anchors.fill: parent
-        onClicked: fileDialog.open()
-    }
-}
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: fileDialog.open()
+                                    }
                                 }
                             }
                         }
@@ -249,3 +269,4 @@ Rectangle {
             }
         }
     }
+}

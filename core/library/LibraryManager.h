@@ -1,23 +1,31 @@
 #pragma once
+
 #include <QObject>
-#include <QStringList>
+#include <QString>
+
+#include "core/library/WallpaperModel.h"
 
 class LibraryManager : public QObject {
     Q_OBJECT
-    Q_PROPERTY(QStringList wallpapers READ wallpapers NOTIFY wallpapersChanged)
+    Q_PROPERTY(WallpaperModel* model READ model CONSTANT)
 
 public:
     explicit LibraryManager(QObject *parent = nullptr);
 
-    QStringList wallpapers() const;
+    WallpaperModel* model();
 
     Q_INVOKABLE bool importVideo(const QString &fileUrl);
+    Q_INVOKABLE bool deleteVideo(const QString &filePath);
+    Q_INVOKABLE bool openVideo(const QString &filePath);
     Q_INVOKABLE void reload();
 
-signals:
-    void wallpapersChanged();
+private:
+    bool generateThumbnail(const QString &videoPath, const QString &thumbPath);
 
 private:
-    QString m_libraryPath;
-    QStringList m_wallpapers;
+    QString m_basePath;
+    QString m_wallpapersPath;
+    QString m_thumbsPath;
+
+    WallpaperModel m_model;
 };

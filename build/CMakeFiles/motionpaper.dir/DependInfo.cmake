@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/frank/MotionPaper/app/main.cpp" "CMakeFiles/motionpaper.dir/app/main.cpp.o" "gcc" "CMakeFiles/motionpaper.dir/app/main.cpp.o.d"
   "/home/frank/MotionPaper/core/library/LibraryManager.cpp" "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o" "gcc" "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o.d"
+  "/home/frank/MotionPaper/core/library/WallpaperModel.cpp" "CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o" "gcc" "CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o.d"
   "/home/frank/MotionPaper/build/motionpaper_autogen/mocs_compilation.cpp" "CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o.d"
   )
 

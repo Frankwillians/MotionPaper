@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/motionpaper.dir/app/main.cpp.o.d"
   "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o"
   "CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.o.d"
+  "CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o"
+  "CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o.d"
   "CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/motionpaper.dir/motionpaper_autogen/mocs_compilation.cpp.o.d"
   "motionpaper"

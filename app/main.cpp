@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     LibraryManager library;
 
     QQuickView view;
-    view.setTitle("MotionPaper");
+    view.setTitle("LivePaper");
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.resize(1400, 900);
 

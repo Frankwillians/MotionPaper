@@ -216,6 +216,30 @@ core/library/LibraryManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/library/LibraryManager.cpp.s
 .PHONY : core/library/LibraryManager.cpp.s
 
+core/library/WallpaperModel.o: core/library/WallpaperModel.cpp.o
+.PHONY : core/library/WallpaperModel.o
+
+# target to build an object file
+core/library/WallpaperModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.o
+.PHONY : core/library/WallpaperModel.cpp.o
+
+core/library/WallpaperModel.i: core/library/WallpaperModel.cpp.i
+.PHONY : core/library/WallpaperModel.i
+
+# target to preprocess a source file
+core/library/WallpaperModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.i
+.PHONY : core/library/WallpaperModel.cpp.i
+
+core/library/WallpaperModel.s: core/library/WallpaperModel.cpp.s
+.PHONY : core/library/WallpaperModel.s
+
+# target to generate assembly for a file
+core/library/WallpaperModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/library/WallpaperModel.cpp.s
+.PHONY : core/library/WallpaperModel.cpp.s
+
 motionpaper_autogen/mocs_compilation.o: motionpaper_autogen/mocs_compilation.cpp.o
 .PHONY : motionpaper_autogen/mocs_compilation.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... core/library/LibraryManager.o"
 	@echo "... core/library/LibraryManager.i"
 	@echo "... core/library/LibraryManager.s"
+	@echo "... core/library/WallpaperModel.o"
+	@echo "... core/library/WallpaperModel.i"
+	@echo "... core/library/WallpaperModel.s"
 	@echo "... motionpaper_autogen/mocs_compilation.o"
 	@echo "... motionpaper_autogen/mocs_compilation.i"
 	@echo "... motionpaper_autogen/mocs_compilation.s"

@@ -16,8 +16,12 @@ find_package(Qt6 REQUIRED COMPONENTS
 
 qt_add_executable(motionpaper
     app/main.cpp
+
     core/library/LibraryManager.h
     core/library/LibraryManager.cpp
+
+    core/library/WallpaperModel.h
+    core/library/WallpaperModel.cpp
 )
 
 target_include_directories(motionpaper
