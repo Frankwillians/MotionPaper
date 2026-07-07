@@ -327,29 +327,125 @@ core/settings/SettingsManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/settings/SettingsManager.cpp.s
 .PHONY : core/settings/SettingsManager.cpp.s
 
-daemon/livepaperd.o: daemon/livepaperd.cpp.o
-.PHONY : daemon/livepaperd.o
+daemon/daemon/LivePaperDaemon.o: daemon/daemon/LivePaperDaemon.cpp.o
+.PHONY : daemon/daemon/LivePaperDaemon.o
 
 # target to build an object file
-daemon/livepaperd.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o
-.PHONY : daemon/livepaperd.cpp.o
+daemon/daemon/LivePaperDaemon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o
+.PHONY : daemon/daemon/LivePaperDaemon.cpp.o
 
-daemon/livepaperd.i: daemon/livepaperd.cpp.i
-.PHONY : daemon/livepaperd.i
+daemon/daemon/LivePaperDaemon.i: daemon/daemon/LivePaperDaemon.cpp.i
+.PHONY : daemon/daemon/LivePaperDaemon.i
 
 # target to preprocess a source file
-daemon/livepaperd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.i
-.PHONY : daemon/livepaperd.cpp.i
+daemon/daemon/LivePaperDaemon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.i
+.PHONY : daemon/daemon/LivePaperDaemon.cpp.i
 
-daemon/livepaperd.s: daemon/livepaperd.cpp.s
-.PHONY : daemon/livepaperd.s
+daemon/daemon/LivePaperDaemon.s: daemon/daemon/LivePaperDaemon.cpp.s
+.PHONY : daemon/daemon/LivePaperDaemon.s
 
 # target to generate assembly for a file
-daemon/livepaperd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.s
-.PHONY : daemon/livepaperd.cpp.s
+daemon/daemon/LivePaperDaemon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.s
+.PHONY : daemon/daemon/LivePaperDaemon.cpp.s
+
+daemon/ipc/DBusServer.o: daemon/ipc/DBusServer.cpp.o
+.PHONY : daemon/ipc/DBusServer.o
+
+# target to build an object file
+daemon/ipc/DBusServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o
+.PHONY : daemon/ipc/DBusServer.cpp.o
+
+daemon/ipc/DBusServer.i: daemon/ipc/DBusServer.cpp.i
+.PHONY : daemon/ipc/DBusServer.i
+
+# target to preprocess a source file
+daemon/ipc/DBusServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.i
+.PHONY : daemon/ipc/DBusServer.cpp.i
+
+daemon/ipc/DBusServer.s: daemon/ipc/DBusServer.cpp.s
+.PHONY : daemon/ipc/DBusServer.s
+
+# target to generate assembly for a file
+daemon/ipc/DBusServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.s
+.PHONY : daemon/ipc/DBusServer.cpp.s
+
+daemon/main.o: daemon/main.cpp.o
+.PHONY : daemon/main.o
+
+# target to build an object file
+daemon/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/main.cpp.o
+.PHONY : daemon/main.cpp.o
+
+daemon/main.i: daemon/main.cpp.i
+.PHONY : daemon/main.i
+
+# target to preprocess a source file
+daemon/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/main.cpp.i
+.PHONY : daemon/main.cpp.i
+
+daemon/main.s: daemon/main.cpp.s
+.PHONY : daemon/main.s
+
+# target to generate assembly for a file
+daemon/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/main.cpp.s
+.PHONY : daemon/main.cpp.s
+
+daemon/renderer/MpvRenderer.o: daemon/renderer/MpvRenderer.cpp.o
+.PHONY : daemon/renderer/MpvRenderer.o
+
+# target to build an object file
+daemon/renderer/MpvRenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o
+.PHONY : daemon/renderer/MpvRenderer.cpp.o
+
+daemon/renderer/MpvRenderer.i: daemon/renderer/MpvRenderer.cpp.i
+.PHONY : daemon/renderer/MpvRenderer.i
+
+# target to preprocess a source file
+daemon/renderer/MpvRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.i
+.PHONY : daemon/renderer/MpvRenderer.cpp.i
+
+daemon/renderer/MpvRenderer.s: daemon/renderer/MpvRenderer.cpp.s
+.PHONY : daemon/renderer/MpvRenderer.s
+
+# target to generate assembly for a file
+daemon/renderer/MpvRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.s
+.PHONY : daemon/renderer/MpvRenderer.cpp.s
+
+daemon/wayland/WaylandLayer.o: daemon/wayland/WaylandLayer.cpp.o
+.PHONY : daemon/wayland/WaylandLayer.o
+
+# target to build an object file
+daemon/wayland/WaylandLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o
+.PHONY : daemon/wayland/WaylandLayer.cpp.o
+
+daemon/wayland/WaylandLayer.i: daemon/wayland/WaylandLayer.cpp.i
+.PHONY : daemon/wayland/WaylandLayer.i
+
+# target to preprocess a source file
+daemon/wayland/WaylandLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.i
+.PHONY : daemon/wayland/WaylandLayer.cpp.i
+
+daemon/wayland/WaylandLayer.s: daemon/wayland/WaylandLayer.cpp.s
+.PHONY : daemon/wayland/WaylandLayer.s
+
+# target to generate assembly for a file
+daemon/wayland/WaylandLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.s
+.PHONY : daemon/wayland/WaylandLayer.cpp.s
 
 livepaperd_autogen/mocs_compilation.o: livepaperd_autogen/mocs_compilation.cpp.o
 .PHONY : livepaperd_autogen/mocs_compilation.o
@@ -429,9 +525,21 @@ help:
 	@echo "... core/settings/SettingsManager.o"
 	@echo "... core/settings/SettingsManager.i"
 	@echo "... core/settings/SettingsManager.s"
-	@echo "... daemon/livepaperd.o"
-	@echo "... daemon/livepaperd.i"
-	@echo "... daemon/livepaperd.s"
+	@echo "... daemon/daemon/LivePaperDaemon.o"
+	@echo "... daemon/daemon/LivePaperDaemon.i"
+	@echo "... daemon/daemon/LivePaperDaemon.s"
+	@echo "... daemon/ipc/DBusServer.o"
+	@echo "... daemon/ipc/DBusServer.i"
+	@echo "... daemon/ipc/DBusServer.s"
+	@echo "... daemon/main.o"
+	@echo "... daemon/main.i"
+	@echo "... daemon/main.s"
+	@echo "... daemon/renderer/MpvRenderer.o"
+	@echo "... daemon/renderer/MpvRenderer.i"
+	@echo "... daemon/renderer/MpvRenderer.s"
+	@echo "... daemon/wayland/WaylandLayer.o"
+	@echo "... daemon/wayland/WaylandLayer.i"
+	@echo "... daemon/wayland/WaylandLayer.s"
 	@echo "... livepaperd_autogen/mocs_compilation.o"
 	@echo "... livepaperd_autogen/mocs_compilation.i"
 	@echo "... livepaperd_autogen/mocs_compilation.s"

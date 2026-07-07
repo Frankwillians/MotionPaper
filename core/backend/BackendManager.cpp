@@ -49,39 +49,17 @@ bool BackendManager::applyWallpaper(const QString &videoPath)
     if (!info.exists())
         return false;
 
-    if (m_currentBackend == "GNOME Wayland") {
-        QString daemonPath = QCoreApplication::applicationDirPath() + "/livepaperd";
+    QStringList args;
+    args << "call";
+    args << "--session";
+    args << "--dest" << "com.livepaper.Daemon";
+    args << "--object-path" << "/com/livepaper/Daemon";
+    args << "--method" << "com.livepaper.Daemon.Play";
+    args << videoPath;
 
-        bool ok = QProcess::startDetached(daemonPath, {
-            "--video",
-            videoPath
-        });
+    bool ok = QProcess::startDetached("gdbus", args);
 
-        qDebug() << "Started livepaperd:" << ok;
+    qDebug() << "Sent Play command to livepaperd:" << ok;
 
-        return ok;
-    }
-
-    if (m_currentBackend == "X11") {
-        QProcess::startDetached("pkill", {"-f", "livepaper-wallpaper-mpv"});
-
-        QStringList args;
-        args << "--title=livepaper-wallpaper-mpv";
-        args << "--wid=0";
-        args << "--loop";
-        args << "--no-audio";
-        args << "--no-border";
-        args << "--fullscreen";
-        args << "--panscan=1.0";
-        args << videoPath;
-
-        bool ok = QProcess::startDetached("mpv", args);
-
-        qDebug() << "Started X11 wallpaper mpv:" << ok;
-
-        return ok;
-    }
-
-    qDebug() << "Backend not implemented yet.";
-    return false;
+    return ok;
 }

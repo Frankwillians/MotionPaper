@@ -83,34 +83,99 @@ CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/build/livepaperd_autogen/mocs_compilation.cpp -o CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o: CMakeFiles/livepaperd.dir/flags.make
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o: /home/frank/MotionPaper/daemon/livepaperd.cpp
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o -c /home/frank/MotionPaper/daemon/livepaperd.cpp
+CMakeFiles/livepaperd.dir/daemon/main.cpp.o: CMakeFiles/livepaperd.dir/flags.make
+CMakeFiles/livepaperd.dir/daemon/main.cpp.o: /home/frank/MotionPaper/daemon/main.cpp
+CMakeFiles/livepaperd.dir/daemon/main.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/livepaperd.dir/daemon/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/main.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/main.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/main.cpp.o -c /home/frank/MotionPaper/daemon/main.cpp
 
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/livepaperd.cpp > CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.i
+CMakeFiles/livepaperd.dir/daemon/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/main.cpp > CMakeFiles/livepaperd.dir/daemon/main.cpp.i
 
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/livepaperd.cpp -o CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.s
+CMakeFiles/livepaperd.dir/daemon/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/main.cpp -o CMakeFiles/livepaperd.dir/daemon/main.cpp.s
+
+CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o: CMakeFiles/livepaperd.dir/flags.make
+CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o: /home/frank/MotionPaper/daemon/daemon/LivePaperDaemon.cpp
+CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o -c /home/frank/MotionPaper/daemon/daemon/LivePaperDaemon.cpp
+
+CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/daemon/LivePaperDaemon.cpp > CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.i
+
+CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/daemon/LivePaperDaemon.cpp -o CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.s
+
+CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o: CMakeFiles/livepaperd.dir/flags.make
+CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o: /home/frank/MotionPaper/daemon/renderer/MpvRenderer.cpp
+CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o -c /home/frank/MotionPaper/daemon/renderer/MpvRenderer.cpp
+
+CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/renderer/MpvRenderer.cpp > CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.i
+
+CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/renderer/MpvRenderer.cpp -o CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.s
+
+CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o: CMakeFiles/livepaperd.dir/flags.make
+CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o: /home/frank/MotionPaper/daemon/ipc/DBusServer.cpp
+CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o -c /home/frank/MotionPaper/daemon/ipc/DBusServer.cpp
+
+CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/ipc/DBusServer.cpp > CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.i
+
+CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/ipc/DBusServer.cpp -o CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.s
+
+CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o: CMakeFiles/livepaperd.dir/flags.make
+CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o: /home/frank/MotionPaper/daemon/wayland/WaylandLayer.cpp
+CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o: CMakeFiles/livepaperd.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o -MF CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o.d -o CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o -c /home/frank/MotionPaper/daemon/wayland/WaylandLayer.cpp
+
+CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/frank/MotionPaper/daemon/wayland/WaylandLayer.cpp > CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.i
+
+CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/frank/MotionPaper/daemon/wayland/WaylandLayer.cpp -o CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.s
 
 # Object files for target livepaperd
 livepaperd_OBJECTS = \
 "CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o"
+"CMakeFiles/livepaperd.dir/daemon/main.cpp.o" \
+"CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o" \
+"CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o" \
+"CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o" \
+"CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o"
 
 # External object files for target livepaperd
 livepaperd_EXTERNAL_OBJECTS =
 
 livepaperd: CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.o
-livepaperd: CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o
+livepaperd: CMakeFiles/livepaperd.dir/daemon/main.cpp.o
+livepaperd: CMakeFiles/livepaperd.dir/daemon/daemon/LivePaperDaemon.cpp.o
+livepaperd: CMakeFiles/livepaperd.dir/daemon/renderer/MpvRenderer.cpp.o
+livepaperd: CMakeFiles/livepaperd.dir/daemon/ipc/DBusServer.cpp.o
+livepaperd: CMakeFiles/livepaperd.dir/daemon/wayland/WaylandLayer.cpp.o
 livepaperd: CMakeFiles/livepaperd.dir/build.make
+livepaperd: /usr/lib/x86_64-linux-gnu/libQt6DBus.so.6.4.2
 livepaperd: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 livepaperd: CMakeFiles/livepaperd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable livepaperd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable livepaperd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/livepaperd.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

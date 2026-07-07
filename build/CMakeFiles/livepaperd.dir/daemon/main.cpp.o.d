@@ -1,5 +1,5 @@
-CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o: \
- /home/frank/MotionPaper/daemon/livepaperd.cpp /usr/include/stdc-predef.h \
+CMakeFiles/livepaperd.dir/daemon/main.cpp.o: \
+ /home/frank/MotionPaper/daemon/main.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -349,22 +349,11 @@ CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QCommandLineParser \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcommandlineparser.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcommandlineoption.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
- /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
- /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
+ /home/frank/MotionPaper/daemon/daemon/LivePaperDaemon.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
+ /home/frank/MotionPaper/daemon/renderer/Renderer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h

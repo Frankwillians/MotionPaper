@@ -67,6 +67,7 @@ include CMakeFiles/livepaperd_autogen_timestamp_deps.dir/compiler_depend.make
 include CMakeFiles/livepaperd_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/livepaperd_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/livepaperd_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6DBus.so.6.4.2
 
 livepaperd_autogen_timestamp_deps: CMakeFiles/livepaperd_autogen_timestamp_deps
 livepaperd_autogen_timestamp_deps: CMakeFiles/livepaperd_autogen_timestamp_deps.dir/build.make

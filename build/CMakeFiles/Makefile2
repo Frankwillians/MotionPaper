@@ -90,7 +90,7 @@ CMakeFiles/motionpaper.dir/all: CMakeFiles/motionpaper_autogen_timestamp_deps.di
 CMakeFiles/motionpaper.dir/all: CMakeFiles/motionpaper_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target motionpaper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=9,10,11,12,13,14,15 "Built target motionpaper"
 .PHONY : CMakeFiles/motionpaper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -117,12 +117,12 @@ CMakeFiles/livepaperd.dir/all: CMakeFiles/livepaperd_autogen_timestamp_deps.dir/
 CMakeFiles/livepaperd.dir/all: CMakeFiles/livepaperd_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=1,2,3 "Built target livepaperd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target livepaperd"
 .PHONY : CMakeFiles/livepaperd.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/livepaperd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/MotionPaper/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/MotionPaper/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/livepaperd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/MotionPaper/build/CMakeFiles 0
 .PHONY : CMakeFiles/livepaperd.dir/rule
@@ -143,7 +143,7 @@ CMakeFiles/livepaperd.dir/clean:
 CMakeFiles/motionpaper_qmlimportscan.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper_qmlimportscan.dir/build.make CMakeFiles/motionpaper_qmlimportscan.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper_qmlimportscan.dir/build.make CMakeFiles/motionpaper_qmlimportscan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=13 "Built target motionpaper_qmlimportscan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=17 "Built target motionpaper_qmlimportscan"
 .PHONY : CMakeFiles/motionpaper_qmlimportscan.dir/all
 
 # Build rule for subdir invocation for target.
@@ -196,7 +196,7 @@ CMakeFiles/motionpaper_autogen.dir/all: CMakeFiles/motionpaper_qmlimportscan.dir
 CMakeFiles/motionpaper_autogen.dir/all: CMakeFiles/motionpaper_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper_autogen.dir/build.make CMakeFiles/motionpaper_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper_autogen.dir/build.make CMakeFiles/motionpaper_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=12 "Built target motionpaper_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=16 "Built target motionpaper_autogen"
 .PHONY : CMakeFiles/motionpaper_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +248,7 @@ CMakeFiles/livepaperd_autogen_timestamp_deps.dir/clean:
 CMakeFiles/livepaperd_autogen.dir/all: CMakeFiles/livepaperd_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd_autogen.dir/build.make CMakeFiles/livepaperd_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd_autogen.dir/build.make CMakeFiles/livepaperd_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=4 "Built target livepaperd_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/frank/MotionPaper/build/CMakeFiles --progress-num=8 "Built target livepaperd_autogen"
 .PHONY : CMakeFiles/livepaperd_autogen.dir/all
 
 # Build rule for subdir invocation for target.

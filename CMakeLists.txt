@@ -13,6 +13,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     Quick
     Qml
     Multimedia
+    DBus
 )
 
 qt_add_executable(motionpaper
@@ -20,7 +21,6 @@ qt_add_executable(motionpaper
 
     core/library/LibraryManager.h
     core/library/LibraryManager.cpp
-
     core/library/WallpaperModel.h
     core/library/WallpaperModel.cpp
 
@@ -32,12 +32,31 @@ qt_add_executable(motionpaper
 )
 
 qt_add_executable(livepaperd
-    daemon/livepaperd.cpp
+    daemon/main.cpp
+
+    daemon/daemon/LivePaperDaemon.h
+    daemon/daemon/LivePaperDaemon.cpp
+
+    daemon/renderer/Renderer.h
+    daemon/renderer/MpvRenderer.h
+    daemon/renderer/MpvRenderer.cpp
+
+    daemon/ipc/DBusServer.h
+    daemon/ipc/DBusServer.cpp
+
+    daemon/wayland/WaylandLayer.h
+    daemon/wayland/WaylandLayer.cpp
 )
 
 target_include_directories(motionpaper
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_include_directories(livepaperd
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/daemon
 )
 
 target_link_libraries(motionpaper
@@ -52,4 +71,5 @@ target_link_libraries(motionpaper
 target_link_libraries(livepaperd
     PRIVATE
         Qt6::Core
+        Qt6::DBus
 )
