@@ -1,5 +1,5 @@
 {
-	"BUILD_DIR" : "/home/frank/MotionPaper/build/motionpaper_autogen",
+	"BUILD_DIR" : "/home/frank/MotionPaper/build/livepaperd_autogen",
 	"CMAKE_BINARY_DIR" : "/home/frank/MotionPaper/build",
 	"CMAKE_CURRENT_BINARY_DIR" : "/home/frank/MotionPaper/build",
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/frank/MotionPaper",
@@ -279,51 +279,13 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginAdditionalTargetInfo.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/frank/MotionPaper",
-	"DEP_FILE" : "/home/frank/MotionPaper/build/motionpaper_autogen/deps",
-	"DEP_FILE_RULE_NAME" : "motionpaper_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"/home/frank/MotionPaper/core/backend/BackendManager.h",
-			"Mu",
-			"OXRLLLIEAH/moc_BackendManager.cpp",
-			null
-		],
-		[
-			"/home/frank/MotionPaper/core/library/LibraryManager.h",
-			"Mu",
-			"4AVNQH6F5F/moc_LibraryManager.cpp",
-			null
-		],
-		[
-			"/home/frank/MotionPaper/core/library/WallpaperModel.h",
-			"Mu",
-			"4AVNQH6F5F/moc_WallpaperModel.cpp",
-			null
-		],
-		[
-			"/home/frank/MotionPaper/core/settings/SettingsManager.h",
-			"Mu",
-			"6XUUAVOR6N/moc_SettingsManager.cpp",
-			null
-		]
-	],
+	"DEP_FILE" : "/home/frank/MotionPaper/build/livepaperd_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "livepaperd_autogen/timestamp",
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/frank/MotionPaper/build/motionpaper_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/frank/MotionPaper/build/motionpaper_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : 
-	[
-		"QT_CORE_LIB",
-		"QT_GUI_LIB",
-		"QT_MULTIMEDIA_LIB",
-		"QT_NETWORK_LIB",
-		"QT_NO_DEBUG",
-		"QT_OPENGL_LIB",
-		"QT_QMLINTEGRATION_LIB",
-		"QT_QMLMODELS_LIB",
-		"QT_QML_LIB",
-		"QT_QUICK_LIB"
-	],
+	"INCLUDE_DIR" : "/home/frank/MotionPaper/build/livepaperd_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/frank/MotionPaper/build/livepaperd_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_NO_DEBUG" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -333,25 +295,16 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/frank/MotionPaper",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
-		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
-		"/usr/include/x86_64-linux-gnu/qt6/QtQuick",
-		"/usr/include/x86_64-linux-gnu/qt6/QtQml",
-		"/usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration",
-		"/usr/include/x86_64-linux-gnu/qt6/QtNetwork",
-		"/usr/include/x86_64-linux-gnu/qt6/QtQmlModels",
-		"/usr/include/x86_64-linux-gnu/qt6/QtOpenGL",
-		"/usr/include/x86_64-linux-gnu/qt6/QtMultimedia",
-		"/usr/include",
 		"/usr/include/c++/13",
 		"/usr/include/x86_64-linux-gnu/c++/13",
 		"/usr/include/c++/13/backward",
 		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
 		"/usr/local/include",
-		"/usr/include/x86_64-linux-gnu"
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -372,28 +325,23 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/frank/MotionPaper/build/motionpaper_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/frank/MotionPaper/build/livepaperd_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/home/frank/MotionPaper/build/motionpaper_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "/home/frank/MotionPaper/build/CMakeFiles/motionpaper_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/frank/MotionPaper/build/CMakeFiles/livepaperd_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/frank/MotionPaper/build/CMakeFiles/motionpaper_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/frank/MotionPaper/build/CMakeFiles/livepaperd_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/frank/MotionPaper/app/main.cpp", "Mu", null ],
-		[ "/home/frank/MotionPaper/core/backend/BackendManager.cpp", "Mu", null ],
-		[ "/home/frank/MotionPaper/core/library/LibraryManager.cpp", "Mu", null ],
-		[ "/home/frank/MotionPaper/core/library/WallpaperModel.cpp", "Mu", null ],
-		[
-			"/home/frank/MotionPaper/core/settings/SettingsManager.cpp",
-			"Mu",
-			null
-		]
+		[ "/home/frank/MotionPaper/daemon/livepaperd.cpp", "Mu", null ]
 	],
 	"VERBOSITY" : 0
 }

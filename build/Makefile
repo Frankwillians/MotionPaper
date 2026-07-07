@@ -130,6 +130,19 @@ motionpaper/fast:
 .PHONY : motionpaper/fast
 
 #=============================================================================
+# Target rules for targets named livepaperd
+
+# Build rule for target.
+livepaperd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 livepaperd
+.PHONY : livepaperd
+
+# fast build rule for target.
+livepaperd/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/build
+.PHONY : livepaperd/fast
+
+#=============================================================================
 # Target rules for targets named motionpaper_qmlimportscan
 
 # Build rule for target.
@@ -167,6 +180,32 @@ motionpaper_autogen: cmake_check_build_system
 motionpaper_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper_autogen.dir/build.make CMakeFiles/motionpaper_autogen.dir/build
 .PHONY : motionpaper_autogen/fast
+
+#=============================================================================
+# Target rules for targets named livepaperd_autogen_timestamp_deps
+
+# Build rule for target.
+livepaperd_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 livepaperd_autogen_timestamp_deps
+.PHONY : livepaperd_autogen_timestamp_deps
+
+# fast build rule for target.
+livepaperd_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd_autogen_timestamp_deps.dir/build.make CMakeFiles/livepaperd_autogen_timestamp_deps.dir/build
+.PHONY : livepaperd_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named livepaperd_autogen
+
+# Build rule for target.
+livepaperd_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 livepaperd_autogen
+.PHONY : livepaperd_autogen
+
+# fast build rule for target.
+livepaperd_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd_autogen.dir/build.make CMakeFiles/livepaperd_autogen.dir/build
+.PHONY : livepaperd_autogen/fast
 
 app/main.o: app/main.cpp.o
 .PHONY : app/main.o
@@ -288,6 +327,54 @@ core/settings/SettingsManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motionpaper.dir/build.make CMakeFiles/motionpaper.dir/core/settings/SettingsManager.cpp.s
 .PHONY : core/settings/SettingsManager.cpp.s
 
+daemon/livepaperd.o: daemon/livepaperd.cpp.o
+.PHONY : daemon/livepaperd.o
+
+# target to build an object file
+daemon/livepaperd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o
+.PHONY : daemon/livepaperd.cpp.o
+
+daemon/livepaperd.i: daemon/livepaperd.cpp.i
+.PHONY : daemon/livepaperd.i
+
+# target to preprocess a source file
+daemon/livepaperd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.i
+.PHONY : daemon/livepaperd.cpp.i
+
+daemon/livepaperd.s: daemon/livepaperd.cpp.s
+.PHONY : daemon/livepaperd.s
+
+# target to generate assembly for a file
+daemon/livepaperd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.s
+.PHONY : daemon/livepaperd.cpp.s
+
+livepaperd_autogen/mocs_compilation.o: livepaperd_autogen/mocs_compilation.cpp.o
+.PHONY : livepaperd_autogen/mocs_compilation.o
+
+# target to build an object file
+livepaperd_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.o
+.PHONY : livepaperd_autogen/mocs_compilation.cpp.o
+
+livepaperd_autogen/mocs_compilation.i: livepaperd_autogen/mocs_compilation.cpp.i
+.PHONY : livepaperd_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+livepaperd_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.i
+.PHONY : livepaperd_autogen/mocs_compilation.cpp.i
+
+livepaperd_autogen/mocs_compilation.s: livepaperd_autogen/mocs_compilation.cpp.s
+.PHONY : livepaperd_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+livepaperd_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/livepaperd.dir/build.make CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.s
+.PHONY : livepaperd_autogen/mocs_compilation.cpp.s
+
 motionpaper_autogen/mocs_compilation.o: motionpaper_autogen/mocs_compilation.cpp.o
 .PHONY : motionpaper_autogen/mocs_compilation.o
 
@@ -320,9 +407,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... livepaperd_autogen"
+	@echo "... livepaperd_autogen_timestamp_deps"
 	@echo "... motionpaper_autogen"
 	@echo "... motionpaper_autogen_timestamp_deps"
 	@echo "... motionpaper_qmlimportscan"
+	@echo "... livepaperd"
 	@echo "... motionpaper"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
@@ -339,6 +429,12 @@ help:
 	@echo "... core/settings/SettingsManager.o"
 	@echo "... core/settings/SettingsManager.i"
 	@echo "... core/settings/SettingsManager.s"
+	@echo "... daemon/livepaperd.o"
+	@echo "... daemon/livepaperd.i"
+	@echo "... daemon/livepaperd.s"
+	@echo "... livepaperd_autogen/mocs_compilation.o"
+	@echo "... livepaperd_autogen/mocs_compilation.i"
+	@echo "... livepaperd_autogen/mocs_compilation.s"
 	@echo "... motionpaper_autogen/mocs_compilation.o"
 	@echo "... motionpaper_autogen/mocs_compilation.i"
 	@echo "... motionpaper_autogen/mocs_compilation.s"

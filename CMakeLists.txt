@@ -12,6 +12,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     Gui
     Quick
     Qml
+    Multimedia
 )
 
 qt_add_executable(motionpaper
@@ -28,17 +29,10 @@ qt_add_executable(motionpaper
 
     core/settings/SettingsManager.h
     core/settings/SettingsManager.cpp
-
-    core/settings/SettingsManager.h
-    core/settings/SettingsManager.cpp
 )
 
-find_package(Qt6 REQUIRED COMPONENTS
-    Core
-    Gui
-    Quick
-    Qml
-    Multimedia
+qt_add_executable(livepaperd
+    daemon/livepaperd.cpp
 )
 
 target_include_directories(motionpaper
@@ -52,6 +46,10 @@ target_link_libraries(motionpaper
         Qt6::Gui
         Qt6::Quick
         Qt6::Qml
-        Qt6::Qml
         Qt6::Multimedia
+)
+
+target_link_libraries(livepaperd
+    PRIVATE
+        Qt6::Core
 )

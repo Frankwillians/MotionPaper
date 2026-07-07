@@ -1,5 +1,6 @@
 #include "BackendManager.h"
 
+#include <QCoreApplication>
 #include <QDebug>
 #include <QFileInfo>
 #include <QProcess>
@@ -49,20 +50,17 @@ bool BackendManager::applyWallpaper(const QString &videoPath)
         return false;
 
     if (m_currentBackend == "GNOME Wayland") {
-    QStringList args;
-    args << "call";
-    args << "--session";
-    args << "--dest" << "org.gnome.Shell";
-    args << "--object-path" << "/com/livepaper/Backend";
-    args << "--method" << "com.livepaper.Backend.ApplyWallpaper";
-    args << videoPath;
+        QString daemonPath = QCoreApplication::applicationDirPath() + "/livepaperd";
 
-    bool ok = QProcess::startDetached("gdbus", args);
+        bool ok = QProcess::startDetached(daemonPath, {
+            "--video",
+            videoPath
+        });
 
-    qDebug() << "GNOME Wayland extension call:" << ok;
+        qDebug() << "Started livepaperd:" << ok;
 
-    return ok;
-}
+        return ok;
+    }
 
     if (m_currentBackend == "X11") {
         QProcess::startDetached("pkill", {"-f", "livepaper-wallpaper-mpv"});

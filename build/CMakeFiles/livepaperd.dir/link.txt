@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/livepaperd.dir/livepaperd_autogen/mocs_compilation.cpp.o CMakeFiles/livepaperd.dir/daemon/livepaperd.cpp.o -o livepaperd  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 
